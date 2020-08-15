@@ -3,8 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>D3Times</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+  title {text-align: center;}
+  h1 {text-align: center;}
+  h2 {text-align: center;}
+  p {text-align: center;}
+
+  </style>
+  <title>D3_Homework</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/d3Style.css">
 
@@ -14,25 +28,67 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
-        <h1>D3Times</h1>
+        <h1>~* Data Driven Times *~</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12  col-md-9">
+      <div class="col-xs-12  col-md-12">
         <div id="scatter">
-          <!-- We append our chart here. -->
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div class="article">
+      <div class="col-xs-12  col-md-12">
+        <!-- div class="article" -->
           <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>Let's.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
+        <!-- div class="article" -->
+          <p>Correlations have been found between demographic and health risk data
+            in the 2014 US Census Bureau's ACS estimated data, located at <a href=
+            "https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml">
+            https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml</a>.
+            This data set includes data about median age, median household
+            income, poverty, obesity, smoking, and access to health care insurance
+            by state.
+            The online version of this article includes an interactive tool that
+            compares the data among the 50 states and District of Columbia.
+          </p>
 
-          <p>Get.</p>
+          <p>
+            States with higher median ages were generally more likely to have healthcare
+            insurance.
+            Vermont, the second oldest state at 42.8, has only 6.7% lacking healthcare,
+            while Texas, the fourth youngest state at 34.3, has the highest rate of
+            people without healthcare at 24.9%.
+            There is also a correlation between age and smoking, with older states
+            having a higher percentage of smokers, although Utah, which has both the
+            youngest median age at 30.5 and the lowest percentage of smokers at 9.7,
+            may be skewing the results.
+            Somewhat surprisingly, there is no clear correlation between age and
+            obesity in the state data.
+          </p>
 
-          <p>Started.</p>
+          <p>
+            In addition, people in states with higher median incomes and lower poverty
+            were healthier than those in poorer states.  There is a correlation
+            between higher poverty rates and higher rates of obesity, smoking, and
+            lacking healthcare.
+            For example, Mississippi has the highest poverty rate in the nation at
+            21.5% and the third highest obesity rate at 35.5%.
+            Conversely, states with a higher median income have
+            lower rates.
+          </p>
+
+          <p>
+            The states with the highest median age and household income
+            and lowest poverty rates generally have better access to healthcare, so 
+            it appears that those who are most able to afford it are more likely
+            to have it, while those who need it the most are less likely.
+          </p>
         </div>
       </div>
     </div>
@@ -42,10 +98,10 @@
   <div id="footer">
     <p>The Coding Boot Camp&copy;2016</p>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script> -->
   <script type="text/javascript" src="assets/js/app.js"></script>
 
 </body>
